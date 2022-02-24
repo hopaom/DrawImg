@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'drawapp',
     'storages',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -59,8 +60,7 @@ ROOT_URLCONF = 'DrawImg.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -155,3 +155,12 @@ AWS_ACCESS_KEY_ID = secrets['S3']['ACCESS_KEY_ID']
 AWS_SECRET_ACCESS_KEY = secrets['S3']['SECRET_ACCESS_KEY']
 AWS_STORAGE_BUCKET_NAME = secrets['S3']['STORAGE_BUCKET_NAME']
 AWS_DEFAULT_ACL = 'public-read'
+
+# EMAIL
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.googlemail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'DRAWIMG4@gmail.com'
+EMAIL_HOST_PASSWORD = 'rmflarmflrl'
