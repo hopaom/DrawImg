@@ -17,7 +17,7 @@ body {
 	flex-direction: column;
 	width: 100vw;
 	height: 100vh;
-	background: #766DC1;
+	background: #9F81CD;
 	margin: 0 auto;
 	padding: 2.875em 1.875em 1.875em;
 	overflow: hidden;
@@ -51,13 +51,81 @@ body {
 
 }
 
-.container > footer {
+.container footer {
 	display: flex;
 	flex-direction: column;
 	width: 100vw;
-	height: 100vh;
-	background: #766DC1;
+	background: #9F81CD;
 	margin: 0 auto;
 	padding: 2.875em 1.875em 1.875em;
-	overflow: hidden;
 }
+
+.container footer .upload-box {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.container footer .upload-box > button {
+    height: 200px;
+    width: 500px;
+    margin: 50px;
+    color: #9F81CD;
+    font-size: 27px;
+    box-shadow: 3px 3px 2px #2c2c2c;
+}
+
+.container footer .upload-box .drag-area{
+  border: 5px dashed #fff;
+  height: 300px;
+  width: 500px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container footer .upload-box .drag-area.active{
+  border: 5px solid #fff;
+}
+
+.container footer .upload-box .drag-area .icon{
+  font-size: 100px;
+  color: #fff;
+}
+
+.container footer .upload-box .drag-area header{
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.container footer .upload-box .drag-area span{
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
+}
+
+.container footer .upload-box .drag-area button{
+  padding: 10px 25px;
+  font-size: 30px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #F198AF;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container footer .upload-box .drag-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+

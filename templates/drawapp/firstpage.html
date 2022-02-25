@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DrawImg</title>
-    <meta name="description" content="Blueprint: On Scroll Effect Layout" />
-    <meta name="keywords" content="on scroll, effect, slide in, layout, template, transition, javascript" />
-    <meta name="author" content="Codrops" />
+    <meta name="description" content="Blueprint: On Scroll Effect Layout"/>
+    <meta name="keywords" content="on scroll, effect, slide in, layout, template, transition, javascript"/>
+    <meta name="author" content="Codrops"/>
     <link rel="stylesheet" media="(min-width: 860px)" href="/static/drawapp/css/component.css"/>
     <link rel="stylesheet" media="(min-width: 860px)" type="text/css" href="/static/drawapp/css/demo.css"/>
 </head>
-
 <body>
 <div class="container">
     <header class="clearfix">
@@ -50,16 +49,24 @@
             </figure>
         </section>
     </div>
-    <footer>
-    <div>
-        <h2>유화그림</h2>
-        <div>
-            <button>파일 업로드</button>
-        </div>
-        <button>직접그리기</button>
+    <div id="color-box">
+        .
     </div>
+    <footer>
+        <div class="upload-box">
+            <h2>유화그림</h2>
+                <div class="drag-area">
+                    <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                    <button>파일 업로드</button>
+                    <span>OR</span>
+                    <header>파일을 여기에 드래그 하세요</header>
+                    <input type="file" hidden>
+                </div>
+            <button>직접그리기</button>
+        </div>
     </footer>
 </div>
+<script src="/static/drawapp/js/drag.js"></script>
 <script src="/static/drawapp/js/modernizr.custom.js"></script>
 <script src="/static/drawapp/js/classie.js"></script>
 <script src="/static/drawapp/js/cbpScroller.js"></script>
