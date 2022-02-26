@@ -8,8 +8,8 @@
     <meta name="description" content="Blueprint: On Scroll Effect Layout"/>
     <meta name="keywords" content="on scroll, effect, slide in, layout, template, transition, javascript"/>
     <meta name="author" content="Codrops"/>
-    <link rel="stylesheet" media="(min-width: 860px)" href="/static/drawapp/css/component.css"/>
-    <link rel="stylesheet" media="(min-width: 860px)" type="text/css" href="/static/drawapp/css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/drawapp/css/demo.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/drawapp/css/scroll.css"/>
 </head>
 <body>
 <div class="container">
@@ -22,29 +22,29 @@
     </header>
     <div id="cbp-so-scroller" class="cbp-so-scroller">
         <section class="cbp-so-section">
-            <article class="cbp-so-side cbp-so-side-left">
+            <article class="fade-right">
                 <h2>그려보기</h2>
                 <p>나만의 풍경을 직접 만들어 보세요!</p>
             </article>
-            <figure class="cbp-so-side cbp-so-side-right">
+            <figure class="fade-left">
                 <img src="/static/drawapp/img/04.png" alt="img01" style="width: 50vw">
             </figure>
         </section>
         <section class="cbp-so-section">
-            <figure class="cbp-so-side cbp-so-side-left">
+            <figure class="fade-right">
                 <img src="/static/drawapp/img/01.png" alt="img01">
             </figure>
-            <article class="cbp-so-side cbp-so-side-right">
+            <article class="fade-left">
                 <h2>나만의 예술작품</h2>
                 <p>내가 원하는 사진을 나만의 예술작품으로 만들어 보세요!</p>
             </article>
         </section>
         <section class="cbp-so-section">
-            <article class="cbp-so-side cbp-so-side-left">
+            <article class="fade-right">
                 <h2>DIY 피포 페인팅</h2>
                 <p>원하는 작품을 직접 그려볼까요?</p>
             </article>
-            <figure class="cbp-so-side cbp-so-side-right">
+            <figure class="fade-left">
                 <img src="/static/drawapp/img/01.png" alt="img01">
             </figure>
         </section>
@@ -54,7 +54,8 @@
     </div>
     <footer>
         <div class="upload-box">
-            <h2>유화그림</h2>
+            <div class="fade-up">
+                <h2>시작하기</h2>
                 <div class="drag-area">
                     <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
                     <button>파일 업로드</button>
@@ -62,16 +63,12 @@
                     <header>파일을 여기에 드래그 하세요</header>
                     <input type="file" hidden>
                 </div>
-            <button>직접그리기</button>
+                <button>직접그리기</button>
+            </div>
         </div>
     </footer>
 </div>
 <script src="/static/drawapp/js/drag.js"></script>
-<script src="/static/drawapp/js/modernizr.custom.js"></script>
-<script src="/static/drawapp/js/classie.js"></script>
-<script src="/static/drawapp/js/cbpScroller.js"></script>
-<script>
-    new cbpScroller(document.getElementById('cbp-so-scroller'));
-</script>
+<script src="/static/drawapp/js/scroll.js"></script>
 </body>
 </html>
