@@ -1,6 +1,4 @@
-/* General Blueprint Style */
-@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
-
+/* 공통 부분 */
 *, *:after, *:before {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -23,18 +21,20 @@ body {
 }
 
 .cbp-so-section {
-    margin-top: 250px;
+    margin-top: 350px;
 }
 
 .cbp-so-section h2 {
     font-size: 5em;
     font-weight: 300;
     line-height: 1;
+    text-align: center;
 }
 
 .cbp-so-section p {
     font-size: 2em;
     font-weight: 300;
+    text-align: center;
 }
 
 /* upload */
@@ -74,7 +74,7 @@ body {
     color: #fff;
 }
 
-.container footer .upload-box .fade-up .drag-area header {
+.container footer .upload-box .fade-up .drag-area #here {
     font-size: 20px;
     font-weight: 500;
     color: #fff;

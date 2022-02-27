@@ -1,7 +1,7 @@
 /* 모바일 화면 */
 @media screen and (max-width: 73.5em) {
 
-    .container header {
+    .container .head {
         display: none
     }
 
@@ -30,6 +30,7 @@
         height: 100vh;
     }
 
+    /* 이미지 흐리게 */
     .container footer .upload-box .fade-up::before {
         background-image: url("/static/drawapp/img/03.jpg");
         background-repeat: no-repeat;
@@ -53,7 +54,7 @@
         margin-top: 100px;
     }
 
-    .container footer .upload-box .fade-up header, span {
+    .container footer .upload-box .fade-up #here, span {
         display: none;
     }
 

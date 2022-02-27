@@ -14,14 +14,15 @@
     <link rel="stylesheet" type="text/css" href="/static/drawapp/css/scroll.css"/>
 </head>
 <body>
+{% include 'header.html' %}
 <div class="container">
-    <header class="clearfix">
-        <h1>On Scroll Effect Layout</h1>
+    <div class="head">
+        <h1>Image Draw Editor</h1>
         <div id="main-img">
             <img src="/static/drawapp/img/03.jpg" alt="img01" class="fade-right" style="width: 70vw; height: auto;">
             <img src="/static/drawapp/img/02.jpg" alt="img01" class="fade-left" style="width: 15vw; height: auto; margin-bottom: 50vh">
         </div>
-    </header>
+    </div>
     <div id="cbp-so-scroller" class="cbp-so-scroller">
         <section class="cbp-so-section">
             <article class="fade-right">
@@ -41,6 +42,7 @@
                 <p>내가 원하는 사진을 나만의 예술작품으로 만들어 보세요!</p>
             </article>
         </section>
+        <div id="color-box"></div>
         <section class="cbp-so-section">
             <article class="fade-right">
                 <h2>DIY 피포 페인팅</h2>
@@ -51,9 +53,6 @@
             </figure>
         </section>
     </div>
-    <div id="color-box">
-        .
-    </div>
     <footer>
         <div class="upload-box">
             <div class="fade-up">
@@ -62,7 +61,7 @@
                     <div class="icon"><i class="fas fa-cloud-upload-alt"></i></div>
                     <button>파일 업로드</button>
                     <span>OR</span>
-                    <header>파일을 여기에 드래그 하세요</header>
+                    <div id="here">파일을 여기에 드래그 하세요</div>
                     <input type="file" hidden>
                 </div>
                 <button>직접그리기</button>
