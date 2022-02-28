@@ -1,114 +1,117 @@
 /* 공통 부분 */
-*, *:after, *:before {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body, html {
-    font-size: 100%;
-    padding: 0;
-    margin: 0;
+body,
+html {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    color: #000;
+  font-family: "Lato", Calibri, Arial, sans-serif;
+  color: #000;
 }
 
 .cbp-so-scroller {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .cbp-so-section {
-    margin-top: 350px;
+  margin-top: 350px;
 }
 
 .cbp-so-section h2 {
-    font-size: 5em;
-    font-weight: 300;
-    line-height: 1;
-    text-align: center;
+  font-size: 5em;
+  font-weight: 300;
+  line-height: 1;
+  text-align: center;
 }
 
 .cbp-so-section p {
-    font-size: 2em;
-    font-weight: 300;
-    text-align: center;
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
 }
 
 /* upload */
 .container footer {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
-    margin: 0 auto;
-    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .container footer .upload-box .fade-up {
-    margin: auto;
-    padding-bottom: 200px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    color: #fff;
-    position: relative;
+  margin: auto;
+  padding-bottom: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  position: relative;
 }
 
 .container footer .upload-box .fade-up .drag-area {
-    height: 300px;
-    width: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  height: 300px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .container footer .upload-box .fade-up .drag-area.active {
-    border: 5px solid #fff;
+  border: 5px solid #fff;
 }
 
 .container footer .upload-box .fade-up .drag-area .icon {
-    font-size: 100px;
-    color: #fff;
+  font-size: 100px;
+  color: #fff;
 }
 
 .container footer .upload-box .fade-up .drag-area #here {
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
 }
 
 .container footer .upload-box .fade-up .drag-area span {
-    font-size: 15px;
-    font-weight: 500;
-    color: #fff;
-    margin: 10px 0 15px 0;
+  font-size: 15px;
+  font-weight: 500;
+  color: #fff;
+  margin: 10px 0 15px 0;
 }
 
 .container footer .upload-box .fade-up .drag-area button {
-    padding: 10px 25px;
-    font-size: 30px;
-    font-weight: 500;
-    border: none;
-    outline: none;
-    background: #F198AF;
-    color: #fff;
-    border-radius: 5px;
-    cursor: pointer;
+  padding: 10px 25px;
+  font-size: 30px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #f198af;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .container footer .upload-box .fade-up .drag-area img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 5px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }
 
 .container footer .upload-box .fade-up > button {
-    margin: 50px;
-    color: #9F81CD;
-    font-size: 27px;
-    box-shadow: 3px 3px 2px #2c2c2c;
+  margin: 50px;
+  color: #9f81cd;
+  font-size: 27px;
+  box-shadow: 3px 3px 2px rgba(44, 44, 44, 0.6);
 }
