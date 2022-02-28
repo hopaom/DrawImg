@@ -1,3 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
-# Create your views here.
+
+def drawpage(request):
+    return render(request, 'drawapp/drawpage.html')

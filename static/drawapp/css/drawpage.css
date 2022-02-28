@@ -1,0 +1,160 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    flex: 1;
+    display: flex;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #cccccc;
+    font-family: 'Roboto', sans-serif;
+    flex-wrap: wrap;
+}
+
+.container #drawpad {
+    display: flex;
+}
+
+#toolbar {
+    background: #303030;
+    width: 200px;
+    height: 512px;
+    margin: 5px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+#toolbar .row {
+    margin-bottom: 5px;
+}
+
+#toolbar .label {
+    padding: 3px 3px 8px;
+}
+
+#toolbar .field {
+    padding: 3px;
+}
+
+#toolbar .color-panel {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+#toolbar .scroll {
+    overflow: scroll;
+    background: rgba(0, 0, 0, .3);
+    padding: 4px;
+    flex-grow: 1;
+}
+
+#toolbar .color {
+    padding: 5px;
+    margin: 5px;
+    color: white;
+}
+
+#sketchpad, #rendered {
+    width: 512px;
+    height: 512px;
+    background: #262626;
+    margin: 5px;
+}
+
+#rendered {
+    display: flex;
+    position: relative;
+    /* background: url(https://upload.wikimedia.org/wikipedia/commons/3/35/Neckertal_20150527-6384.jpg); */
+}
+
+.no-render {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* display:none; */
+}
+
+.no-render .icon {
+    font-size: 80px;
+    color: #adadad;
+}
+
+.no-render .label {
+    font-size: 12px;
+    margin-top: 8px;
+    color: #adadad;
+    width: 190px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.generated-image {
+    flex-grow: 1;
+}
+
+.btn-render {
+    position: absolute;
+    background: rgba(15, 48, 214, 0.5);
+    color: #e8e8e8;
+    width: 160px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 10px;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -80px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-render:hover {
+    background: rgba(15, 48, 214, 0.7);
+    padding: 11px;
+    bottom: 39px;
+    width: 162px;
+    margin-left: -81px;
+}
+
+input {
+    width: 98%;
+}
+
+input[type="button"] {
+    padding: 7px;
+    background: #676767;
+    color: white;
+    border: 0;
+    border-radius: 3px;
+    font-size: 13px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+/* 모바일 화면 */
+@media screen and (max-width: 1253px) {
+    #rendered {
+        left: 105px;
+    }
+}
