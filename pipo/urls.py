@@ -4,5 +4,6 @@ from django.urls import path, include
 from pipo import views
 
 urlpatterns = [
-        path('pipo/', views.pipo, name='pipo')
+        path('pipo/', views.pipo, name='pipo'),
+        path('header/', views.header,name='header')
     ]
