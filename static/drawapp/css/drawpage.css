@@ -24,6 +24,7 @@ html, body {
     color: #cccccc;
     font-family: 'Roboto', sans-serif;
     flex-wrap: wrap;
+    background-image: linear-gradient(#9f81cd, #ebb2d6, #f198af, #fbd1d3);
 }
 
 .container #drawpad {
