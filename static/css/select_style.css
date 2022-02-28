@@ -13,13 +13,6 @@ body {
     text-align: center;
 }
 
-.header .logo {
-    color: white;
-    font-size: 4rem;
-    font-weight: 800;
-    letter-spacing: -0.2rem;
-}
-
 .stepper-item {
     position: relative;
     display: flex;
@@ -134,7 +127,7 @@ body {
         width: 56%;
         display: flex;
         justify-content: space-between;
-        margin: 3rem auto;
+        margin: 8rem auto 3rem;
     }
 
     .container {
@@ -246,7 +239,7 @@ body {
         width: 75%;
         display: flex;
         justify-content: space-between;
-        margin: 3rem auto;
+        margin: 7rem auto 2rem;
     }
 
     .container {
