@@ -21,6 +21,7 @@
     <div class="header">
         <span class="logo">DrawImg</span>
     </div>
+{#{% include 'header.html' %}#}
     <div class="stepper-wrapper">
         <div class="stepper-item completed">
             <div class="step-counter">1</div>
@@ -41,6 +42,9 @@
                 <p>스타일</p>
             </div>
             <ul class="style-list">
+                <li id="original">
+                    <img src="https://storage.googleapis.com/download.tensorflow.org/example_images/YellowLabradorLooking_new.jpg"/>
+                </li>
                 <li>
                     <img src="https://kr.painting-planet.com/images/image264_0.jpg"/>
                 </li>
@@ -64,16 +68,13 @@
                 </li>
                 <li>
                     <img src="https://kr.painting-planet.com/images/image264_0.jpg"/>
-                </li>
-                <li>
-                    <img src="https://cphoto.asiae.co.kr/listimglink/6/2018052511223347562_1527214954.jpg"/>
                 </li>
             </ul>
         </div>
-        <div class="original">
-            <p>원본</p>
-            <img src="https://storage.googleapis.com/download.tensorflow.org/example_images/YellowLabradorLooking_new.jpg"/>
-        </div>
+{#        <div class="original">#}
+{#            <p>원본</p>#}
+{#            <img src="https://storage.googleapis.com/download.tensorflow.org/example_images/YellowLabradorLooking_new.jpg"/>#}
+{#        </div>#}
         <div class="stylized">
             <p>확인</p>
             <div id="box">

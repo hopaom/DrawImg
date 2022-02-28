@@ -107,7 +107,6 @@ body {
 }
 
 .style-container .style-list {
-    height: 85%;
     padding: 0 3%;
     display: grid;
     grid-template-columns: repeat(3, 32%);
@@ -135,7 +134,7 @@ body {
         width: 56%;
         display: flex;
         justify-content: space-between;
-        margin: 8rem auto 3rem;
+        margin: 3rem auto;
     }
 
     .container {
@@ -147,14 +146,14 @@ body {
         grid-template-rows: repeat(3, 17rem);
         column-gap: 5%;
         row-gap: 3%;
-        background-color: floralwhite;
+        background-color: rgba(255, 255, 255, 0.5);
         padding: 2rem;
         border-radius: 2rem;
     }
 
     .style-container {
-        grid-column-start: 1;
-        grid-column-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 4;
         height: 100%;
@@ -162,20 +161,19 @@ body {
     }
 
     .container .stylized {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 2;
-        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
         height: 100%;
     }
 
-    .container .original {
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 1;
-        grid-row-end: 2;
-    }
-
+    /*.container .original {*/
+    /*    grid-column-start: 2;*/
+    /*    grid-column-end: 3;*/
+    /*    grid-row-start: 1;*/
+    /*    grid-row-end: 2;*/
+    /*}*/
     .container .original img {
         width: 60%;
         height: 76%;
@@ -197,9 +195,9 @@ body {
     }
 
     .container .stylized #box {
-        border: 2px dashed pink;
+        border: 2px dashed #9f81cd;
         width: 70%;
-        height: 75%;
+        height: 80%;
         border-radius: 1rem;
         margin: 12% auto 0;
     }
@@ -236,6 +234,10 @@ body {
         float: right;
         cursor: pointer;
     }
+
+    .style-container .style-list {
+        height: 85%;
+    }
 }
 
 
@@ -252,29 +254,28 @@ body {
         height: 100rem;
         margin: 5rem auto;
         display: grid;
-        grid-template-rows: 38rem 25rem 29rem;
+        grid-template-rows: 35rem 40rem;
         row-gap: 3rem;
-        background-color: floralwhite;
+        background-color: rgba(255, 255, 255, 0.4);
         padding: 2rem;
         border-radius: 2rem;
     }
 
     .style-container {
-        grid-row-start: 1;
-        grid-row-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
         height: 100%;
         display: block;
     }
 
-    .container .original {
-        grid-row-start: 2;
-        grid-row-end: 3;
-        /*text-align: center;*/
-    }
-
+    /*.container .original {*/
+    /*    grid-row-start: 2;*/
+    /*    grid-row-end: 3;*/
+    /*    !*text-align: center;*!*/
+    /*}*/
     .container .stylized {
-        grid-row-start: 3;
-        grid-row-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
         height: 100%;
     }
 
@@ -299,7 +300,7 @@ body {
     }
 
     .container .stylized #box {
-        border: 2px dashed pink;
+        border: 2px dashed #9f81cd;
         width: 65%;
         height: 90%;
         border-radius: 1rem;
@@ -337,5 +338,9 @@ body {
         text-align: center;
         float: right;
         cursor: pointer;
+    }
+
+    .style-container .style-list {
+        height: 90%;
     }
 }
