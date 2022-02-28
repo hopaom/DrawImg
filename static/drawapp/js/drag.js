@@ -38,9 +38,24 @@ function showFile(){
     let fileReader = new FileReader(); //creating new FileReader object
     fileReader.onload = ()=>{
       let fileURL = fileReader.result; //passing user file source in fileURL variable
+      var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+      // test
+      $.ajax({
+        url: 'http://127.0.0.1:8000/upload',
+        data: {'img_64':fileURL},
+        beforeSend: function(xhr) {
+              xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        },
+        method: "POST",
+        success: function (response){
+          window.location.replace(`test/${response}`)
+        }
+    })
+
+      // test end
         // UNCOMMENT THIS BELOW LINE. I GOT AN ERROR WHILE UPLOADING THIS POST SO I COMMENTED IT
       // let imgTag = `<img src="${fileURL}" alt="image">`; //creating an img tag and passing user selected file source inside src attribute
-      dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
+      // dropArea.innerHTML = imgTag; //adding that created img tag inside dropArea container
     }
     fileReader.readAsDataURL(file);
   }else{
