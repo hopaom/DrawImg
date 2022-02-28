@@ -1,13 +1,37 @@
 from io import BytesIO
-from django.shortcuts import render
 from django.core.mail import EmailMessage
 from django.template.loader import render_to_string
 import requests
 from PIL import Image
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
+import base64
+from drawapp.apps import DrawappConfig
+import re
+from uuid import uuid4
 
-# Create your views here.
 
-def index_test(request):
+def firstpage(request):
+    return render(request, 'drawapp/firstpage.html')
+
+def img_upload(request):
+    img_file = request.POST.__getitem__('img_64')
+    img_data = re.sub('^data:image/.+;base64,', '', img_file)
+    img = Image.open(BytesIO(base64.b64decode(img_data)))
+    buffer =BytesIO()
+    img.save(buffer, 'PNG')
+    buffer.seek(0)
+    file_name=str(uuid4().hex)
+    DrawappConfig.s3.put_object(Bucket="sparta-team4-project", Key=f"img_upload/{file_name}.jpg", Body=buffer, ACL='public-read')
+    return HttpResponse(file_name)
+
+def test(request, img):
+    img = f"https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/img_upload/{img}.jpg"
+    return render(request, 'test.html', {'result':img})
+
+def drawpage(request):
+    return render(request, 'drawapp/drawpage.html')
+ def index_test(request):
     return render(request, 'index.html')
 
 def email_test(request):

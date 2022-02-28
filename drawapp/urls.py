@@ -1,3 +1,4 @@
+
 from django.urls import path
 from .views import index_test, send_email, email_test, nst_test,style_upload
 
@@ -7,4 +8,7 @@ urlpatterns=[
     path('email_test/', email_test),
     path('nst_test/', nst_test),
     path('style/', style_upload),
+    path('upload', views.img_upload, name='upload'),
+    path('test/<str:img>', views.test, name='test'),
+    path('drawpage/', views.drawpage, name='drawpage'),
 ]
