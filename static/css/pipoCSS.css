@@ -1,131 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-size: cover;
+  font-size: 25px;
+  line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: 100%;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -99;
+  width: 100%;
+  height: 100%;
+}
 
 
-  * {
-    margin: 0;
-    padding: 0;
-  }
+#tab-menu {
+  width: 90vw;
+  background: #fbd1d3;
+  position: absolute;
+  left: 50%;
+  top: 15vh;
+  transform: translatex(-50%);
+  border-radius: 4px;
+}
 
-  li {
-    list-style: none;
-  }
+#tab-menu ul {
+  overflow: hidden;
+}
 
-  a {
-    text-decoration: none;
-  }
+#tab-menu li {
+  float: left;
+  width: 20vw;
+  text-align: center;
 
-  body {
-    background-size: cover;
-    font-size: 25px;
-    line-height: 1.6em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    width: 100%;
-    height: 100%;
-  }
+}
 
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -99;
-    width: 100%;
-    height: 100%;
-  }
+#tab-menu li a {
+  display: block;
+  color: #fff;
+  padding: 5px 5px;
+  font-weight: bold;
+  font-size: 1rem;
+}
 
+#tab-menu li.active a {
+  border-bottom: 3px solid #fff;
+  color: #766dc1;
 
-  #tab-menu {
-    width: 70vw;
-    background: #fbd1d3;
-    position: absolute;
-    left: 50%;
-    top: 15vh;
-    transform: translatex(-50%);
-    border-radius: 4px;
-  }
+}
 
-  #tab-menu ul {
-    overflow: hidden;
-  }
+#tab-menu li div {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 55px;
+  background: rgba(255, 255, 255, 0.3);
+  text-align: left;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 0 0 4px 4px;
+  min-height: 200px;
+}
 
-  #tab-menu li {
-    float: left;
-    width: 20vw;
-    text-align: center;
+#tab-menu li div img {
+  width: 100%;
+}
 
-  }
+.email_input {
+  width: 150px;
+  height: 30px;
+  margin: 4px;
+}
 
-  #tab-menu li a {
-    display: block;
-    color: #fff;
-    padding: 5px 5px;
-    font-weight: bold;
-    font-size: 1rem;
-  }
+#tab-menu li div ul p {
+  text-align: center;
+  font-size: 10px;
+}
 
-  #tab-menu li.active a {
-    border-bottom: 3px solid #fff;
-    color: #766dc1;
+.button {
+  width: 170px;
+  height: 40px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #ebb2d6;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin: 20px;
+}
 
-  }
-
-  #tab-menu li div {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 55px;
-    background: rgba(255, 255, 255, 0.3);
-    text-align: left;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 0 0 4px 4px;
-    min-height: 200px;
-  }
-
-  #tab-menu li div img {
-    width: 100%;
-  }
-
-  .email_input {
-    width: 150px;
-    height: 30px;
-    margin: 4px;
-  }
-
-  #tab-menu li div ul p {
-    text-align: center;
-    font-size: 10px;
-  }
-
-  .button {
-    width: 170px;
-    height: 40px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #ebb2d6;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    margin: 20px;
-  }
-
-  .button:hover {
-    background-color: #f198af;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-  }
+.button:hover {
+  background-color: #f198af;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
 
 .message {
   left: 50%;
@@ -136,122 +134,152 @@
 }
 
 
-  @keyframes move_wave {
-    0% {
-      transform: translateX(0) translateZ(0) scaleY(1)
-    }
-
-    50% {
-      transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-
-    100% {
-      transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
+@keyframes move_wave {
+  0% {
+    transform: translateX(0) translateZ(0) scaleY(1)
   }
 
-  .waveWrapper {
-    z-index: -30;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
+  50% {
+    transform: translateX(-25%) translateZ(0) scaleY(0.55)
   }
 
-  .waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(#9f81cd, #ebb2d6, #f198af, #fbd1d3);
+  100% {
+    transform: translateX(-50%) translateZ(0) scaleY(1)
   }
+}
 
-  .bgTop {
-    z-index: -5;
-    opacity: 0.5;
-  }
+.waveWrapper {
+  z-index: -30;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
 
-  .bgMiddle {
-    z-index: -10;
-    opacity: 0.75;
-  }
+.waveWrapperInner {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  height: 100%;
+  bottom: -1px;
+  background-image: linear-gradient(#9f81cd, #ebb2d6, #f198af, #fbd1d3);
+}
 
-  .bgBottom {
-    z-index: -15;
-  }
+.bgTop {
+  z-index: -5;
+  opacity: 0.5;
+}
 
-  .wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-  }
+.bgMiddle {
+  z-index: -10;
+  opacity: 0.75;
+}
 
-  .waveTop {
-    background-size: 50% 100px;
-  }
+.bgBottom {
+  z-index: -15;
+}
 
-  .waveAnimation .waveTop {
-    animation: move-wave 3s;
-    -webkit-animation: move-wave 3s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-  }
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background-repeat: repeat no-repeat;
+  background-position: 0 bottom;
+  transform-origin: center bottom;
+}
 
-  .waveMiddle {
-    background-size: 50% 120px;
-  }
+.waveTop {
+  background-size: 50% 100px;
+}
 
-  .waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-  }
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+  -webkit-animation: move-wave 3s;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
 
-  .waveBottom {
-    background-size: 50% 100px;
-  }
+.waveMiddle {
+  background-size: 50% 120px;
+}
 
-  .waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
-  }
+.waveAnimation .waveMiddle {
+  animation: move_wave 10s linear infinite;
+}
 
-/* Header */
+.waveBottom {
+  background-size: 50% 100px;
+}
 
-/* 모바일 (1) */
+.waveAnimation .waveBottom {
+  animation: move_wave 15s linear infinite;
+}
+
 @media (min-width:425px) {
- 
-}
-
-/* 태블릿 (2) */
-@media (min-width:768px) {
-  
-}
-
-/* 태블릿이고, 데스크탑이 아닌 경우 (3) */
-@media (min-width:768px) and (max-width:1024px) {
-}
-
-/* 데스크탑 (4) */
-@media (min-w1dth:1024px) {
   #tab-menu {
     width: 70vw;
+    background: #fbd1d3;
+    position: absolute;
+    left: 50%;
+    top: 15vh;
+    transform: translatex(-50%);
+    border-radius: 4px;
+  }
+}
+
+
+@media (min-width:768px) {
+  #tab-menu {
+    width: 70vw;
+    background: #fbd1d3;
+    position: absolute;
+    left: 50%;
+    top: 15vh;
+    transform: translatex(-50%);
+    border-radius: 4px;
   }
 
-  #tab-menu li a {
-    font-size: 1.5rem;
+  #tab-menu li div ul p {
+    text-align: center;
+    font-size: 12px;
   }
-  .button {
-    width: 200px;
-    height: 50px;
-    font-size: 1.2rem;
+}
+
+
+@media (min-width:768px) and (max-width:1024px) {
+    #tab-menu {
+      width: 60vw;
+      background: #fbd1d3;
+      position: absolute;
+      left: 50%;
+      top: 15vh;
+      transform: translatex(-50%);
+      border-radius: 4px;
+    }
+
+    #tab-menu li div ul p {
+      text-align: center;
+      font-size: 15px;
+    }
+}
+
+@media (min-width:1024px) {
+  #tab-menu {
+    width: 60vw;
+    background: #fbd1d3;
+    position: absolute;
+    left: 50%;
+    top: 15vh;
+    transform: translatex(-50%);
+    border-radius: 4px;
   }
   #tab-menu li div ul p {
-    font-size: 1.3rem;
+    text-align: center;
+    font-size: 18px;
   }
+
 }
