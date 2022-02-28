@@ -1,0 +1,341 @@
+body {
+    background-image: linear-gradient(#9f81cd, #ebb2d6, #f198af, #fbd1d3);
+}
+
+* {
+    font-size: 12px;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 8rem;
+    text-align: center;
+}
+
+.header .logo {
+    color: white;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -0.2rem;
+}
+
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+
+    /*@media (max-width: 768px) {*/
+    /*  font-size: 12px;*/
+    /*}*/
+}
+
+.stepper-item::before {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: -50%;
+    z-index: 2;
+}
+
+.stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 2;
+}
+
+.stepper-item .step-counter {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #ccc;
+    margin-bottom: 6px;
+    color: #FFF;
+}
+
+
+.stepper-item.completed .step-counter {
+    background-color: #fbd1d3;
+}
+
+.stepper-item.completed::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px solid #fbd1d3;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+    z-index: 3;
+}
+
+.stepper-item:first-child::before {
+    content: none;
+}
+
+.stepper-item:last-child::after {
+    content: none;
+}
+
+.stepper-item.active {
+    font-weight: 900;
+}
+
+.step-name.active {
+    font-size: 1.1rem;
+    /*color: #9F81CD;*/
+    /*text-decoration: underline;*/
+    /*text-decoration-color: #9F81CD;*/
+}
+
+
+.style-container .select-style {
+    text-align: center;
+    height: 7%;
+}
+
+.style-container .style-list {
+    height: 85%;
+    padding: 0 3%;
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    grid-template-rows: repeat(3, 32%);
+    row-gap: 2%;
+    column-gap: 2%;
+}
+
+.style-container .style-list li {
+    list-style: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.style-container .style-list li img {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+@media (min-width: 860px) {
+    .stepper-wrapper {
+        width: 56%;
+        display: flex;
+        justify-content: space-between;
+        margin: 8rem auto 3rem;
+    }
+
+    .container {
+        width: 78%;
+        height: 52rem;
+        margin: 5rem auto;
+        display: grid;
+        grid-template-columns: 45% 50%;
+        grid-template-rows: repeat(3, 17rem);
+        column-gap: 5%;
+        row-gap: 3%;
+        background-color: floralwhite;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    .style-container {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        height: 100%;
+        display: block;
+    }
+
+    .container .stylized {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        height: 100%;
+    }
+
+    .container .original {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .container .original img {
+        width: 60%;
+        height: 76%;
+        margin-top: 4.2rem;
+        margin-left: 10%;
+    }
+
+    .container div p {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: -.1rem;
+        opacity: .7;
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+        float: left;
+        padding-bottom: .1rem;
+        border-bottom-style: solid;
+        width: fit-content;
+    }
+
+    .container .stylized #box {
+        border: 2px dashed pink;
+        width: 70%;
+        height: 75%;
+        border-radius: 1rem;
+        margin: 12% auto 0;
+    }
+
+    .container .stylized #result {
+        width: 70%;
+        height: 75%;
+        margin: 5% 17%;
+    }
+
+    .stylized #confirm {
+        width: 100%;
+        height: 80%;
+        margin-top: 10%;
+        /*border: 1px solid black;*/
+    }
+
+    .stylized #confirm img {
+        width: 70%;
+        height: 75%;
+        margin: 4% 14%;
+        border-radius: 1rem;
+        border: 1px solid;
+    }
+
+    .stylized #confirm #btn {
+        width: 12%;
+        height: 13%;
+        border-radius: 100%;
+        background-color: #9F81CD;
+        color: white;
+        font-size: 2.4rem;
+        text-align: center;
+        float: right;
+        cursor: pointer;
+    }
+}
+
+
+@media (min-width: 340px) and (max-width: 860px) {
+    .stepper-wrapper {
+        width: 75%;
+        display: flex;
+        justify-content: space-between;
+        margin: 3rem auto;
+    }
+
+    .container {
+        width: 78%;
+        height: 100rem;
+        margin: 5rem auto;
+        display: grid;
+        grid-template-rows: 38rem 25rem 29rem;
+        row-gap: 3rem;
+        background-color: floralwhite;
+        padding: 2rem;
+        border-radius: 2rem;
+    }
+
+    .style-container {
+        grid-row-start: 1;
+        grid-row-end: 2;
+        height: 100%;
+        display: block;
+    }
+
+    .container .original {
+        grid-row-start: 2;
+        grid-row-end: 3;
+        /*text-align: center;*/
+    }
+
+    .container .stylized {
+        grid-row-start: 3;
+        grid-row-end: 4;
+        height: 100%;
+    }
+
+    .container .original img {
+        width: 60%;
+        height: 80%;
+        margin-top: 12%;
+        margin-left: 10%;
+    }
+
+    .container div p {
+        font-size: 1.6rem;
+        font-weight: 700;
+        letter-spacing: -.1rem;
+        opacity: .7;
+        margin-top: 0;
+        margin-bottom: 0.8rem;
+        float: left;
+        padding-bottom: .1rem;
+        border-bottom-style: solid;
+        width: fit-content;
+    }
+
+    .container .stylized #box {
+        border: 2px dashed pink;
+        width: 65%;
+        height: 90%;
+        border-radius: 1rem;
+        margin: 8% auto 0;
+    }
+
+    .container .stylized #result {
+        width: 70%;
+        height: 75%;
+        margin: 5% 17%;
+    }
+
+    .stylized #confirm {
+        width: 100%;
+        height: 80%;
+        margin-top: 10%;
+        /*border: 1px solid black;*/
+    }
+
+    .stylized #confirm img {
+        width: 70%;
+        height: 75%;
+        margin: 4% 14%;
+        border-radius: 1rem;
+        border: 1px solid;
+    }
+
+    .stylized #confirm #btn {
+        width: 12%;
+        height: 16%;
+        border-radius: 100%;
+        background-color: #9F81CD;
+        color: white;
+        font-size: 2.4rem;
+        text-align: center;
+        float: right;
+        cursor: pointer;
+    }
+}
