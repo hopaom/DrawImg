@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'drawapp',
     'storages',
-    'api',
 ]
 
 MIDDLEWARE = [

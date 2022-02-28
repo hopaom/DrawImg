@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id = "style_img">
+    <input type="text" id = "style_key">
+    <button onclick="style_upload()">스타일 업로드</button>
+
+<script>
+    function style_upload(){
+        var img = $('#style_img').val()
+        var key = $('#style_key').val()
+
+    $.ajax({
+    url: 'http://127.0.0.1:5000/style_upload',
+    data: {'img':img, 'key':key},
+    method: "POST",
+    success: function (response){
+        alert(response['result'])
+        window.location.reload()
+    }
+    })
+}
+</script>
+</body>
+</html>

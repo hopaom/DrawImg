@@ -254,16 +254,16 @@
                     }
                 }
 
-                const response = await fetch('/api/v1/gaugan/', {
+                const response = await fetch('http://127.0.0.1:5000/generate', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({'data':sketch})
+                    body: JSON.stringify(sketch)
                 })
                 .then(response => response.json());
                 this.setState({
-                    image: response['result'],
+                    image: response['url'],
                 });
             }
 

@@ -15,19 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from ninja import NinjaAPI
-
-from api.v1.style_router import router as style_router
-from api.v1.pipo_router import router as pipo_router
-from api.v1.GauGAN_router import router as gaugan_router
-
-api= NinjaAPI()
-api.add_router('/style/', style_router)
-api.add_router('/pipo/', pipo_router)
-api.add_router('/gaugan/', gaugan_router)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("api/v1/", api.urls),
     path('', include('drawapp.urls')),
 ]
