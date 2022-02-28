@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
-/* 모바일 (1) */
-@media (min-width:425px) {
+
+
   * {
     margin: 0;
     padding: 0;
@@ -16,15 +15,12 @@
 
   body {
     background-size: cover;
-    font-family: 'Raleway', sans-serif;
     font-size: 25px;
     line-height: 1.6em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     width: 100%;
     height: 100%;
-
   }
 
   body::before {
@@ -39,235 +35,6 @@
 
 
   #tab-menu {
-    font-family: 'Gamja Flower', cursive;
-    width: 90vw;
-    background: #fbd1d3;
-    position: absolute;
-    left: 50%;
-    top: 15vh;
-    transform: translatex(-50%);
-    border-radius: 4px;
-
-  }
-
-  #tab-menu ul {
-    overflow: hidden;
-  }
-
-  #tab-menu li {
-    float: left;
-    width: 120px;
-    text-align: center;
-
-  }
-
-  #tab-menu li a {
-    display: block;
-    color: #fff;
-    padding: 10px 10px;
-    font-weight: bold;
-  }
-
-  #tab-menu li.active a {
-    border-bottom: 3px solid #fff;
-    color: #766dc1;
-  }
-
-  #tab-menu li div {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 55px;
-    background: rgba(255, 255, 255, 0.3);
-    text-align: left;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 0 0 4px 4px;
-    min-height: 200px;
-  }
-
-  #tab-menu li div img {
-    width: 100%;
-  }
-
-  .email_input {
-    width: 150px;
-    height: 30px;
-    margin: 4px;
-  }
-
-  #tab-menu li div ul p {
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  .button {
-    font-family: 'Gamja Flower', cursive;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #ebb2d6;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    margin: 20px;
-  }
-
-  .button:hover {
-    background-color: #f198af;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-  }
-
-  .message {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-  }
-
-
-  @keyframes move_wave {
-    0% {
-      transform: translateX(0) translateZ(0) scaleY(1)
-    }
-
-    50% {
-      transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-
-    100% {
-      transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-  }
-
-  .waveWrapper {
-    z-index: -30;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-  }
-
-  .waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(#9f81cd, #ebb2d6, #f198af, #fbd1d3);
-  }
-
-  .bgTop {
-    z-index: -5;
-    opacity: 0.5;
-  }
-
-  .bgMiddle {
-    z-index: -10;
-    opacity: 0.75;
-  }
-
-  .bgBottom {
-    z-index: -15;
-  }
-
-  .wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-  }
-
-  .waveTop {
-    background-size: 50% 100px;
-  }
-
-  .waveAnimation .waveTop {
-    animation: move-wave 3s;
-    -webkit-animation: move-wave 3s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-  }
-
-  .waveMiddle {
-    background-size: 50% 120px;
-  }
-
-  .waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-  }
-
-  .waveBottom {
-    background-size: 50% 100px;
-  }
-
-  .waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
-  }
-}
-
-/* 태블릿 (2) */
-@media (min-width:768px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  body {
-    background-size: cover;
-    font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-    line-height: 1.6em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    width: 100%;
-    height: 100%;
-
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -99;
-    width: 100%;
-    height: 100%;
-  }
-
-
-  #tab-menu {
-    font-family: 'Gamja Flower', cursive;
     width: 70vw;
     background: #fbd1d3;
     position: absolute;
@@ -275,7 +42,6 @@
     top: 15vh;
     transform: translatex(-50%);
     border-radius: 4px;
-
   }
 
   #tab-menu ul {
@@ -284,7 +50,7 @@
 
   #tab-menu li {
     float: left;
-    width: 120px;
+    width: 20vw;
     text-align: center;
 
   }
@@ -292,13 +58,15 @@
   #tab-menu li a {
     display: block;
     color: #fff;
-    padding: 10px 10px;
+    padding: 5px 5px;
     font-weight: bold;
+    font-size: 1rem;
   }
 
   #tab-menu li.active a {
     border-bottom: 3px solid #fff;
     color: #766dc1;
+
   }
 
   #tab-menu li div {
@@ -331,470 +99,13 @@
 
   #tab-menu li div ul p {
     text-align: center;
-    font-size: 1rem;
+    font-size: 10px;
   }
 
   .button {
-    font-family: 'Gamja Flower', cursive;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #ebb2d6;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    margin: 20px;
-  }
-
-  .button:hover {
-    background-color: #f198af;
-    box-shadow: 0px 15px 20px rgba(241, 152, 175, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-  }
-
-  .message {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-  }
-
-
-  @keyframes move_wave {
-    0% {
-      transform: translateX(0) translateZ(0) scaleY(1)
-    }
-
-    50% {
-      transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-
-    100% {
-      transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-  }
-
-  .waveWrapper {
-    z-index: -30;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-  }
-
-  .waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(#9f81cd, #ebb2d6, #f198af, #fbd1d3);
-  }
-
-  .bgTop {
-    z-index: -5;
-    opacity: 0.5;
-  }
-
-  .bgMiddle {
-    z-index: -10;
-    opacity: 0.75;
-  }
-
-  .bgBottom {
-    z-index: -15;
-  }
-
-  .wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-  }
-
-  .waveTop {
-    background-size: 50% 100px;
-  }
-
-  .waveAnimation .waveTop {
-    animation: move-wave 3s;
-    -webkit-animation: move-wave 3s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-  }
-
-  .waveMiddle {
-    background-size: 50% 120px;
-  }
-
-  .waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-  }
-
-  .waveBottom {
-    background-size: 50% 100px;
-  }
-
-  .waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
-  }
-}
-
-/* 태블릿이고, 데스크탑이 아닌 경우 (3) */
-@media (min-width:768px) and (max-width:1024px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  body {
-    background-size: cover;
-    font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-    line-height: 1.6em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    width: 100%;
-    height: 100%;
-
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -99;
-    width: 100%;
-    height: 100%;
-  }
-
-
-  #tab-menu {
-    font-family: 'Gamja Flower', cursive;
-    width: 70vw;
-    background: #fbd1d3;
-    position: absolute;
-    left: 50%;
-    top: 15vh;
-    transform: translatex(-50%);
-    border-radius: 4px;
-
-  }
-
-  #tab-menu ul {
-    overflow: hidden;
-  }
-
-  #tab-menu li {
-    float: left;
-    width: 120px;
-    text-align: center;
-
-  }
-
-  #tab-menu li a {
-    display: block;
-    color: #fff;
-    padding: 10px 10px;
-    font-weight: bold;
-  }
-
-  #tab-menu li.active a {
-    border-bottom: 3px solid #fff;
-    color: #766dc1;
-  }
-
-  #tab-menu li div {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 55px;
-    background: rgba(255, 255, 255, 0.3);
-    text-align: left;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 0 0 4px 4px;
-    min-height: 200px;
-  }
-
-  #tab-menu li div img {
-    width: 100%;
-  }
-
-  .email_input {
-    width: 150px;
-    height: 30px;
-    margin: 4px;
-  }
-
-  #tab-menu li div ul p {
-    text-align: center;
+    width: 170px;
+    height: 40px;
     font-size: 1rem;
-  }
-
-  .button {
-    font-family: 'Gamja Flower', cursive;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #ebb2d6;
-    border: none;
-    border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-    margin: 20px;
-  }
-
-  .button:hover {
-    background-color: #f198af;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
-  }
-
-  .message {
-    left: 50%;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-  }
-
-
-  @keyframes move_wave {
-    0% {
-      transform: translateX(0) translateZ(0) scaleY(1)
-    }
-
-    50% {
-      transform: translateX(-25%) translateZ(0) scaleY(0.55)
-    }
-
-    100% {
-      transform: translateX(-50%) translateZ(0) scaleY(1)
-    }
-  }
-
-  .waveWrapper {
-    z-index: -30;
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    margin: auto;
-  }
-
-  .waveWrapperInner {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    height: 100%;
-    bottom: -1px;
-    background-image: linear-gradient(#9f81cd, #ebb2d6, #f198af, #fbd1d3);
-  }
-
-  .bgTop {
-    z-index: -5;
-    opacity: 0.5;
-  }
-
-  .bgMiddle {
-    z-index: -10;
-    opacity: 0.75;
-  }
-
-  .bgBottom {
-    z-index: -15;
-  }
-
-  .wave {
-    position: absolute;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background-repeat: repeat no-repeat;
-    background-position: 0 bottom;
-    transform-origin: center bottom;
-  }
-
-  .waveTop {
-    background-size: 50% 100px;
-  }
-
-  .waveAnimation .waveTop {
-    animation: move-wave 3s;
-    -webkit-animation: move-wave 3s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
-  }
-
-  .waveMiddle {
-    background-size: 50% 120px;
-  }
-
-  .waveAnimation .waveMiddle {
-    animation: move_wave 10s linear infinite;
-  }
-
-  .waveBottom {
-    background-size: 50% 100px;
-  }
-
-  .waveAnimation .waveBottom {
-    animation: move_wave 15s linear infinite;
-  }
-}
-
-/* 데스크탑 (4) */
-@media (min-width:1024px) {
-  * {
-    margin: 0;
-    padding: 0;
-  }
-
-  li {
-    list-style: none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-  body {
-    background-size: cover;
-    font-family: 'Raleway', sans-serif;
-    font-size: 25px;
-    line-height: 1.6em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
-    width: 100%;
-    height: 100%;
-
-  }
-
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -99;
-    width: 100%;
-    height: 100%;
-  }
-
-
-  #tab-menu {
-    font-family: 'Gamja Flower', cursive;
-    width: 70vw;
-    background: #fbd1d3;
-    position: absolute;
-    left: 50%;
-    top: 15vh;
-    transform: translatex(-50%);
-    border-radius: 4px;
-
-  }
-
-  #tab-menu ul {
-    overflow: hidden;
-  }
-
-  #tab-menu li {
-    float: left;
-    width: 120px;
-    text-align: center;
-
-  }
-
-  #tab-menu li a {
-    display: block;
-    color: #fff;
-    padding: 10px 10px;
-    font-weight: bold;
-  }
-
-  #tab-menu li.active a {
-    border-bottom: 3px solid #fff;
-    color: #766dc1;
-  }
-
-  #tab-menu li div {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    top: 55px;
-    background: rgba(255, 255, 255, 0.3);
-    text-align: left;
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 0 0 4px 4px;
-    min-height: 200px;
-  }
-
-  #tab-menu li div img {
-    width: 100%;
-  }
-
-  .email_input {
-    width: 150px;
-    height: 30px;
-    margin: 4px;
-  }
-
-  #tab-menu li div ul p {
-    text-align: center;
-    font-size: 1rem;
-  }
-
-  .button {
-    font-family: 'Gamja Flower', cursive;
-    width: 200px;
-    height: 50px;
-    font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
     font-weight: 600;
@@ -908,5 +219,39 @@
 
   .waveAnimation .waveBottom {
     animation: move_wave 15s linear infinite;
+  }
+
+/* Header */
+
+/* 모바일 (1) */
+@media (min-width:425px) {
+ 
+}
+
+/* 태블릿 (2) */
+@media (min-width:768px) {
+  
+}
+
+/* 태블릿이고, 데스크탑이 아닌 경우 (3) */
+@media (min-width:768px) and (max-width:1024px) {
+}
+
+/* 데스크탑 (4) */
+@media (min-w1dth:1024px) {
+  #tab-menu {
+    width: 70vw;
+  }
+
+  #tab-menu li a {
+    font-size: 1.5rem;
+  }
+  .button {
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  #tab-menu li div ul p {
+    font-size: 1.3rem;
   }
 }
