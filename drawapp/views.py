@@ -25,3 +25,6 @@ def img_upload(request):
 def test(request, img):
     img = f"https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/img_upload/{img}.jpg"
     return render(request, 'test.html', {'result':img})
+
+def drawpage(request):
+    return render(request, 'drawapp/drawpage.html')

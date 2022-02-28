@@ -6,4 +6,5 @@ urlpatterns = [
     path('', views.firstpage, name='firstpage'),
     path('upload', views.img_upload, name='upload'),
     path('test/<str:img>', views.test, name='test'),
+    path('drawpage/', views.drawpage, name='drawpage'),
 ]
