@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 {% csrf_token %}
+{% load static %}
 
 <head>
     <meta charset="UTF-8"/>
@@ -10,10 +11,10 @@
     <meta name="description" content="Blueprint: On Scroll Effect Layout"/>
     <meta name="keywords" content="on scroll, effect, slide in, layout, template, transition, javascript"/>
     <meta name="author" content="Codrops"/>
-    <link rel="stylesheet" type="text/css" href="/static/drawapp/css/firstpage.css"/>
-    <link rel="stylesheet" type="text/css" href="/static/drawapp/css/firstpage_mobile.css"/>
-    <link rel="stylesheet" type="text/css" href="/static/drawapp/css/firstpage_pc.css"/>
-    <link rel="stylesheet" type="text/css" href="/static/drawapp/css/scroll.css"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'drawapp/css/firstpage.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'drawapp/css/firstpage_mobile.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'drawapp/css/firstpage_pc.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'drawapp/css/scroll.css' %}"/>
     <!-- JQuery -->
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 
@@ -24,8 +25,8 @@
     <div class="head">
         <h1>Image Draw Editor</h1>
         <div id="main-img">
-            <img src="/static/drawapp/img/03.jpg" alt="img01" class="fade-right" style="width: 70vw; height: auto;">
-            <img src="/static/drawapp/img/02.jpg" alt="img01" class="fade-left" style="width: 15vw; height: auto; margin-bottom: 50vh">
+            <img src="{% static 'drawapp/img/03.jpg' %}" alt="img01" class="fade-right" style="width: 70vw; height: auto;">
+            <img src="{% static 'drawapp/img/02.jpg' %}" alt="img01" class="fade-left" style="width: 15vw; height: auto; margin-bottom: 50vh">
         </div>
     </div>
     <div id="cbp-so-scroller" class="cbp-so-scroller">
@@ -35,12 +36,12 @@
                 <p>나만의 풍경을 직접 만들어 보세요!</p>
             </article>
             <figure class="fade-left">
-                <img src="/static/drawapp/img/04.png" alt="img01" style="width: 70vw;">
+                <img src="{% static 'drawapp/img/04.png' %}" alt="img01" style="width: 70vw;">
             </figure>
         </section>
         <section class="cbp-so-section">
             <figure class="fade-right">
-                <img src="/static/drawapp/img/01.png" alt="img01">
+                <img src="{% static 'drawapp/img/01.png' %}" alt="img01">
             </figure>
             <div id="color-box"></div>
             <article class="fade-left">
@@ -55,7 +56,7 @@
                 <p>원하는 작품을 직접 그려볼까요?</p>
             </article>
             <figure class="fade-left">
-                <img src="/static/drawapp/img/01.png" alt="img01" style="width: 40vw">
+                <img src="{% static 'drawapp/img/01.png' %}" alt="img01" style="width: 40vw">
             </figure>
         </section>
     </div>
@@ -70,12 +71,12 @@
                     <div id="here">파일을 여기에 드래그 하세요</div>
                     <input type="file" hidden>
                 </div>
-                <button>직접그리기</button>
+                <button onclick="window.location.replace('/drawpage')">직접그리기</button>
             </div>
         </div>
     </footer>
 </div>
-<script src="/static/drawapp/js/drag.js"></script>
-<script src="/static/drawapp/js/scroll.js"></script>
+<script src="{% static 'drawapp/js/drag.js' %}" ></script>
+<script src="{% static 'drawapp/js/scroll.js' %}"></script>
 </body>
 </html>

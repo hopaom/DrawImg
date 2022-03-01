@@ -1,3 +1,5 @@
+
+
 const colorMap = [
     {color: "#384f83", id: 154, label: "sea"},
     {color: "#efefef", id: 105, label: "cloud", labelColor: "black"},
@@ -75,6 +77,12 @@ class SketchBoard extends React.Component {
     }
 
     generateSketch = async () => {
+        this.setState({
+            image: "https://icon-library.com/images/load-icon-gif/load-icon-gif-20.jpg",
+        });
+        $('.btn-render').hide()
+        $('#go_next').hide()
+        $('.loading_label').show()
         const context = this.sketchpad.context;
         const colorLayer = context.getImageData(0, 0, context.canvas.width, context.canvas.height).data;
 
@@ -96,7 +104,7 @@ class SketchBoard extends React.Component {
                 sketch[y][x] = match_id;
             }
         }
-
+        $('#loading_image').show()
         const response = await fetch('http://127.0.0.1:5000/generate', {
             method: 'POST',
             headers: {
@@ -108,6 +116,13 @@ class SketchBoard extends React.Component {
         this.setState({
             image: response['url'],
         });
+        $('.btn-render').show()
+        $('#go_next').show()
+        $('.btn-render ').css({
+            left: "30%"
+        })
+        $('.btn-render').text('다시 그리기')
+        $('.loading_label').hide()
     }
 
     render() {
@@ -145,16 +160,31 @@ class SketchBoard extends React.Component {
                     {this.state.image ? null : <div className="no-render">
                         <div className="icon"><i className="far fa-images"></i></div>
                         <div className="label">Paint something then click the render button below!</div>
+
                     </div>}
-                    {this.state.image ? <img className="generated-image" src={this.state.image}/> : null}
-                    <div className="btn-render" onClick={this.generateSketch}>Generate Image</div>
+                    {this.state.image ? <img className="generated-image" src={this.state.image}/>:null}
+                    <div className="btn-render" onClick={this.generateSketch}>그리기</div>
+                    <div id="go_next" onClick={this.next}>다음 단계로</div>
+                    <div className="loading_label">그림을 그리는 중입니다!</div>
                 </div>
             </div>
         </React.Fragment>;
     }
+
+    next = () => {
+            const src = jQuery('.generated-image').attr("src");
+            const word = src.split('https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/gau/')
+            const word2 = word[1].split('.')
+            window.location.replace(`/test/gau/${word2[0]}`)
+            }
 }
+
 
 ReactDOM.render(
     <SketchBoard/>,
     document.getElementById('root')
 );
+
+$('#loading_image').hide()
+$('#go_next').hide()
+$('.loading_label').hide()

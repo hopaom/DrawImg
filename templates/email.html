@@ -1,0 +1,124 @@
+{% load static %}
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td>
+            <table align="center" border="0" cellspacing="0" cellpadding="0" width="600" style="border-collapse: collapse; border: 1px solid #9f81cd;">
+                <tr>
+                    <td bgcolor="#9f81cd" align="center">
+                        <img src="{% static 'email/img/logo.png' %}" width="120" style="display: block; padding: 10px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="https://img.freepik.com/free-vector/artists-creating-artworks-flat-illustration_74855-5218.jpg?w=900"
+                             alt="Image" style="display: block;" width="500"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px 30px 25px 30px;">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center" style="font-family: fantasy">
+                                    <img src="{% static 'email/img/thankyou.png' %}" alt="Thank you!" width="500">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="font-family: '맑은 고딕'; padding: 35px 0 45px 0;">
+                                    &#128075; DrawImg를 찾아주셔서 감사합니다. &#9995; <br>
+                                    DrawImg는 그림을 전혀 못 그리는 사람도<br> 간단한 터치만으로 <span style="font-weight: bold;">예술 작품</span>을 만들 수 있게 도와줍니다.<br>
+                                    또한 쉽고 빠르게 나만의 <span style="font-weight: bold;">피포페인팅 도안</span>을 가질 수 있습니다. &#127912; </br></br>
+                                    &#10024; 이제 DrawImg와 함께 멋진 예술 작품을 직접 만들어보세요! &#10024;
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                                        <tr>
+                                            <td width="260" valign="top">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td>
+<!--                                                            여기에 피포페인팅(색상코드 없는 버전) 넣어주시면 됩니다!-->
+                                                            <img src="{{img}}"
+                                                                 alt="left-pipo" width="100%" height="260" style="display: block">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="padding: 25px 0 0 0; font-weight: bold;">
+                                                            색상코드 없는 버전
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                            <td style="font-size:0; line-height: 0;" width="20">
+                                                &nbsp;
+                                            </td>
+                                            <td width="260" valign="top">
+                                                <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                                                    <tr>
+                                                        <td>
+<!--                                                            여기에 피포페인팅(색상코드 있는 버전) 넣어주시면 됩니다!-->
+                                                            <img src="{{label}}"
+                                                                 alt="right-pipo" width="100%" height="260" style="display:block;">
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center" style="padding: 25px 0 0 0; font-weight: bold;">
+                                                            색상코드 있는 버전
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="padding: 40px 10px 10px 10px;">
+                                    <table>
+                                        <tr>
+
+                                            <td bgcolor="#f198af" style="display: block;" border="0">
+                                                <a href="#" style="display:block; padding: 15px; text-decoration: none; color: white; font-weight: bold;">홈페이지 바로가기</a>
+                                            </td>
+
+                                        </tr>
+                                    </table>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#9f81cd" style="padding: 20px 20px 20px 20px">
+                        <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td width="75%" style="color: white;">
+                                    &reg; 4team, DrawImg 2022
+                                </td>
+                                <td align="right">
+                                    <table border="0" cellspacing="0" cellpadding="0">
+                                        <tr>
+                                            <td>
+                                                <a href="https://ko-kr.facebook.com/">
+                                                    <img src="{% static 'email/img/facebook.png' %}" alt="" width="32" height="32" style="display:block;" border="0">
+                                                </a>
+                                            </td>
+                                            <td style="font-size: 0; line-height: 0;" width="20">&nbsp;</td>
+                                            <td>
+                                                <a href="https://www.instagram.com/?hl=ko">
+                                                    <img src="{% static 'email/img/instagram.png' %}" alt="" width="38" height="38" style="display:block;" border="0">
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
