@@ -13,11 +13,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/atrament.js/1.0.0/atrament.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="{% static 'drawapp/progress.css' %}" rel="stylesheet" type="text/css">
 
 </head>
 
 <body>
 {% include 'header.html' %}
+<div class="stepper-wrapper">
+    <div class="stepper-item active">
+        <div class="step-counter">1</div>
+        <div class="step-name active">파일 업로드</div>
+    </div>
+    <div class="stepper-item">
+        <div class="step-counter">2</div>
+        <div class="step-name active">스타일 고르기</div>
+    </div>
+    <div class="stepper-item">
+        <div class="step-counter">3</div>
+        <div class="step-name">이메일 입력</div>
+    </div>
+</div>
 <div id="root"></div>
 <link rel="stylesheet" href="/static/drawapp/css/drawpage.css"/>
 <script type="text/babel" src="/static/drawapp/js/drawpage.js"></script>
