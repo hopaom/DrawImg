@@ -48,7 +48,7 @@ function showFile(){
         },
         method: "POST",
         success: function (response){
-          window.location.replace(`test/${response}`)
+          window.location.replace(`test/upload/${response}`)
         }
     })
 

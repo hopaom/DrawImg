@@ -4,10 +4,10 @@ from django.template.loader import render_to_string
 import requests
 from PIL import Image
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
 import base64
 from drawapp.apps import DrawappConfig
-import re
+import re, os
 from uuid import uuid4
 
 
@@ -25,14 +25,15 @@ def img_upload(request):
     DrawappConfig.s3.put_object(Bucket="sparta-team4-project", Key=f"img_upload/{file_name}.jpg", Body=buffer, ACL='public-read')
     return HttpResponse(file_name)
 
-def test(request, img):
-    img = f"https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/img_upload/{img}.jpg"
+def test(request, where,  img):
+    if where == "gau":
+        img = f"https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/gau/{img}.png"   
+    else:
+        img = f"https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/img_upload/{img}.jpg"
     return render(request, 'test.html', {'result':img})
 
 def drawpage(request):
     return render(request, 'drawapp/drawpage.html')
- def index_test(request):
-    return render(request, 'index.html')
 
 def email_test(request):
     return render(request, 'email_test.html')
@@ -40,14 +41,11 @@ def email_test(request):
 def nst_test(request):
     return render(request, 'nst_test.html')
 
-def style_upload(request):
-    return render(request, 'style_upload.html')
 
 def send_email(request):
     url=request.POST['url']
     id = request.POST['id']
     email = request.POST['email']
-
     URL = "http://127.0.0.1:5000/pipo"
     url = (requests.post(URL, json={'url':url})).json()
     imgs = [url['img'],url['label_img']]
@@ -58,7 +56,7 @@ def send_email(request):
         res = requests.get(img)
         res = Image.open(BytesIO(res.content))
         res.save(f'media/result/{name}.png', 'png')
-    mail_subject = 'smtp를 사용하여 이메일 보내기'
+    mail_subject = 'DrawIMG 도안이 도착했습니다~!'
     message = render_to_string('email.html', {
     'img': url['img'],
     'label': url['label_img']
@@ -69,5 +67,6 @@ def send_email(request):
     send_email.attach_file(f'media/result/{names[0]}.png')
     send_email.attach_file(f'media/result/{names[1]}.png')
     send_email.send()
-
-    return render(request, 'index.html')
+    print(names)
+    [os.remove(f'media/result/{file}.png') for file in names]
+    return redirect('home')

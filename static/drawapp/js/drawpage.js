@@ -164,14 +164,19 @@ class SketchBoard extends React.Component {
                     </div>}
                     {this.state.image ? <img className="generated-image" src={this.state.image}/>:null}
                     <div className="btn-render" onClick={this.generateSketch}>그리기</div>
-                    <div id="go_next" onClick={this.generateSketch}>다음 단계로</div>
+                    <div id="go_next" onClick={this.next}>다음 단계로</div>
                     <div className="loading_label">그림을 그리는 중입니다!</div>
-                    
-
                 </div>
             </div>
         </React.Fragment>;
     }
+
+    next = () => {
+            const src = jQuery('.generated-image').attr("src");
+            const word = src.split('https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/gau/')
+            const word2 = word[1].split('.')
+            window.location.replace(`/test/gau/${word2[0]}`)
+            }
 }
 
 
