@@ -10,9 +10,9 @@
 
     <!--css-->
     {% load static %}
-    <link href="{% static 'drawapp/select_style.css' %}" rel="stylesheet" type="text/css">
+{#    <link href="{% static 'drawapp/select_style.css' %}" rel="stylesheet" type="text/css">#}
     <link href="{% static 'drawapp/progress.css' %}" rel="stylesheet" type="text/css">
-{#    <link href="static/css/select_style.css" rel="stylesheet" type="text/css">#}
+    <link href="static/css/select_style.css" rel="stylesheet" type="text/css">
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,32 +43,32 @@
                 <p>스타일</p>
             </div>
             <ul class="style-list">
-                <li>
+                <li id="0">
                     <span>&#9660; 원본</span>
                     <img alt="original" id="original" src="..."/>
                 </li>
-                <li>
+                <li id="1">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/1.jpg"/>
                 </li>
-                <li>
+                <li id="2">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/4.jpg"/>
                 </li>
-                <li>
+                <li id="3">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/10.jpg"/>
                 </li>
-                <li>
+                <li id="4">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/15.jpg"/>
                 </li>
-                <li>
+                <li id="5">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/20.jpg"/>
                 </li>
-                <li>
+                <li id="6">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/22.jpg"/>
                 </li>
-                <li>
+                <li id="7">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/23.jpg"/>
                 </li>
-                <li>
+                <li id="8">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/25.jpg"/>
                 </li>
             </ul>
@@ -89,7 +89,7 @@
     <!--jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!--js-->
-    <script src='{% static 'drawapp/select_style.js' %}'></script>
-{#    <script src='static/js/select_style.js'></script>#}
+{#    <script src='{% static 'drawapp/select_style.js' %}'></script>#}
+    <script src='static/js/select_style.js'></script>
 </body>
 </html>
