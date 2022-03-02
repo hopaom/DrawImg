@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-=5-(49#y^14d0@383jedn0n-@yckf0z5jyuxm=*#z$m9j7g3+t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'drawapp',
+    'pipo',
     'storages',
 ]
 
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'DrawImg.urls'
@@ -59,8 +61,7 @@ ROOT_URLCONF = 'DrawImg.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -113,22 +114,25 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/seoul'
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    STATIC_DIR
+]
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
@@ -149,9 +153,19 @@ STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 with open(os.path.join(BASE_DIR, 'aws.json')) as f:
     secrets = json.loads(f.read())
 
+
 AWS_S3_REGION_NAME = 'ap-northeast-2'
 AWS_S3_SIGNATURE_VERSION = 's3v4'
-AWS_ACCESS_KEY_ID = secrets['S3']['ACCESS_KEY_ID']
-AWS_SECRET_ACCESS_KEY = secrets['S3']['SECRET_ACCESS_KEY']
-AWS_STORAGE_BUCKET_NAME = secrets['S3']['STORAGE_BUCKET_NAME']
+AWS_ACCESS_KEY_ID = secrets['AWS']['ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = secrets['AWS']['SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = secrets['AWS']['STORAGE_BUCKET_NAME']
 AWS_DEFAULT_ACL = 'public-read'
+
+# EMAIL
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.googlemail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'DRAWIMG4@gmail.com'
+EMAIL_HOST_PASSWORD = 'rmflarmflrl'
