@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% csrf_token %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JQuery -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <title>Document</title>
+    <style>
+        .loading{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading label{
+            font-size: 21px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <label>스타일 적용중입니다!</label>
+        <img src="https://icon-library.com/images/load-icon-gif/load-icon-gif-20.jpg" alt="">
+    </div>
+    <div class="imgs">
+    </div>
+    <img src="{{result}}" style="display: none;" id="origin">
+</body>
+<script>
+    $(document).ready(function(){
+    var src = jQuery('#origin').attr("src");
+    var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+
+    $.ajax({
+        url: 'http://127.0.0.1:5000/style',
+        data: {'url': src},
+        beforeSend: function(xhr) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        },
+        method: "POST",
+        success: function (response){
+            imgs = response['result']
+            for (i=0; i<imgs.length; i++){
+                var temp_html = `
+                <img src="${imgs[i]}">
+                `
+
+                $('.imgs').append(temp_html)
+            }
+            $('.loading').hide()
+        }
+    })
+});
+
+</script>
+</html>

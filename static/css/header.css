@@ -4,7 +4,7 @@
   padding: 0;
 }
 header {
-  background-color: #9f81cd;
+  background: #9f81cd;
   margin: 0 auto;
   width: 100vw;
   height: 70px;
@@ -107,5 +107,5 @@ header {
 
 .waveAnimation .waveBottom {
   animation: move_wave 15s linear infinite;
-}
 
+}
