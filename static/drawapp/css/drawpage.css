@@ -1,0 +1,202 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+}
+
+.container {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: #cccccc;
+    font-family: 'Roboto', sans-serif;
+    flex-wrap: wrap;
+    background-image: linear-gradient(#9f81cd, #ebb2d6, #f198af, #fbd1d3);
+}
+
+.container #drawpad {
+  display: flex;
+}
+
+#toolbar {
+  background: #9f81cd;
+  width: 200px;
+  height: 512px;
+  margin: 5px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+#toolbar .row {
+  margin-bottom: 5px;
+}
+
+#toolbar .row input {
+  background: #ebb2d6;
+}
+#toolbar .row input:hover {
+  background: #f198af;
+}
+
+#toolbar .label {
+  padding: 3px 3px 8px;
+  color: #fff;
+}
+
+#toolbar .field {
+  padding: 3px;
+}
+
+#toolbar .color-panel {
+  flex-grow: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+#toolbar .scroll {
+  overflow: scroll;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 4px;
+  flex-grow: 1;
+}
+
+#toolbar .color {
+  padding: 5px;
+  margin: 5px;
+  color: white;
+}
+
+#sketchpad,
+#rendered {
+  width: 512px;
+  height: 512px;
+  background: #262626;
+  margin: 5px;
+  border: 1px solid rgba(159, 129, 205, 1);
+}
+
+#rendered {
+  display: flex;
+  position: relative;
+  /* background: url(https://upload.wikimedia.org/wikipedia/commons/3/35/Neckertal_20150527-6384.jpg); */
+}
+
+.no-render {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* display:none; */
+}
+
+.no-render .icon {
+  font-size: 80px;
+  color: #adadad;
+}
+
+.no-render .label {
+  font-size: 12px;
+  margin-top: 8px;
+  color: #adadad;
+  width: 190px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.generated-image {
+  flex-grow: 1;
+}
+
+.btn-render {
+  position: absolute;
+  background: #9f81cd;
+  color: #e8e8e8;
+  width: 160px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -80px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#go_next {
+  position: absolute;
+  background: #9f81cd;
+  color: #e8e8e8;
+  width: 160px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 10px;
+  bottom: 20px;
+  left: 75%;
+  margin-left: -80px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-render:hover {
+  background: #766dc1;
+  padding: 11px;
+  bottom: 19px;
+  width: 162px;
+  margin-left: -81px;
+}
+
+#go_next:hover {
+  background: #766dc1;
+  padding: 11px;
+  bottom: 19px;
+  width: 162px;
+  margin-left: -81px;
+}
+
+input {
+  width: 98%;
+}
+
+input[type="button"] {
+  padding: 7px;
+  background: #676767;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+  font-size: 13px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.loading_label {
+  position: absolute;
+  left: 25%;
+  top: 10%;
+  font-size: 24px;
+  color: #766dc1;
+}
+/* 모바일 화면 */
+@media screen and (max-width: 1253px) {
+  #rendered {
+    left: 105px;
+  }
+}
