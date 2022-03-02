@@ -10,7 +10,6 @@ from drawapp.apps import DrawappConfig
 import re, os
 from uuid import uuid4
 
-
 def firstpage(request):
     return render(request, 'drawapp/firstpage.html')
 
