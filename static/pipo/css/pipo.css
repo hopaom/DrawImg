@@ -134,9 +134,11 @@ body::before {
   width: 100%;
 }
 
+<<<<<<<< HEAD:static/pipo_static/pipoCSS.css
 @media (min-width:425px) {
-
-
+========
+@media (min-width: 425px) {
+>>>>>>>> 7309de61eca967f352f8326c1ba7af4e88eedca4:static/pipo/css/pipo.css
   #tab-menu {
     width: 70vw;
     background: #fbd1d3;

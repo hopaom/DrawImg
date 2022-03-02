@@ -16,19 +16,31 @@
     <!-- JQuery -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="{% static 'drawapp/css/drawpage.css' %}"/>
+<<<<<<< HEAD
+=======
+    <link href="{% static 'css/progress.css' %}" rel="stylesheet" type="text/css">
+>>>>>>> 7309de61eca967f352f8326c1ba7af4e88eedca4
 
 </head>
 
 <body>
 {% include 'header.html' %}
 <div class="stepper-wrapper">
+<<<<<<< HEAD
     <div class="stepper-item active">
+=======
+    <div class="stepper-item completed">
+>>>>>>> 7309de61eca967f352f8326c1ba7af4e88eedca4
         <div class="step-counter">1</div>
         <div class="step-name active">파일 업로드</div>
     </div>
     <div class="stepper-item">
         <div class="step-counter">2</div>
+<<<<<<< HEAD
         <div class="step-name active">스타일 고르기</div>
+=======
+        <div class="step-name">스타일 고르기</div>
+>>>>>>> 7309de61eca967f352f8326c1ba7af4e88eedca4
     </div>
     <div class="stepper-item">
         <div class="step-counter">3</div>
@@ -214,7 +226,11 @@ class SketchBoard extends React.Component {
             const src = jQuery('.generated-image').attr("src");
             const word = src.split('https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/gau/')
             const word2 = word[1].split('.')
+<<<<<<< HEAD
             window.location.replace(`/test/gau/${word2[0]}`)
+=======
+            window.location.replace(`/select/gau/${word2[0]}`)
+>>>>>>> 7309de61eca967f352f8326c1ba7af4e88eedca4
             }
 }
 

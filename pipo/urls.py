@@ -1,9 +1,7 @@
-from tokenize import Name
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from pipo import views
 
 urlpatterns = [
-        path('pipo/', views.pipo, name='pipo'),
-        path('header/', views.header,name='header')
+        path('pipo/<str:idx>/<str:img>', views.pipo, name='pipo'),
     ]

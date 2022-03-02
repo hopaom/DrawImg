@@ -23,4 +23,3 @@ urlpatterns = [
     path('', include('drawapp.urls')),
     path('', include('pipo.urls')),
 ]
- 
