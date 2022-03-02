@@ -44,7 +44,6 @@ def send_email(request):
     URL = "http://127.0.0.1:5000/pipo"
     url = (requests.post(URL, json={'url':origin_url})).json()
     imgs = [url['img'],url['label_img'], origin_url]
-    print(imgs)
     names = []
     for img in imgs:
         name = img.split('/')[-1].split('.')[0]
