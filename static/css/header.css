@@ -20,6 +20,8 @@ header {
 .logo img {
   display: block;
   width: 120px;
+  margin-top: 15px;
+
 }
 
 @keyframes move_wave {
@@ -105,4 +107,5 @@ header {
 
 .waveAnimation .waveBottom {
   animation: move_wave 15s linear infinite;
+
 }

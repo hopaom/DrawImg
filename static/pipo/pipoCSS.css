@@ -133,8 +133,6 @@ body::before {
   width: 100%;
 }
 
-
-
 @media (min-width:425px) {
   #tab-menu {
     width: 70vw;

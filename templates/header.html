@@ -1,12 +1,14 @@
 {% load static %}
 <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}"/>
+<link href="{% static 'css/header.css' %}" rel="stylesheet" type="text/css"> 
+
 <header>
     <a class="logo" href="/">
         <h1>
             <img src="{% static 'img/logo.png' %}" alt="/">
         </h1>
     </a>
+
 </header>
 <div class="waveWrapper waveAnimation">
     <div class="waveWrapperInner bgTop">
