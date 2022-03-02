@@ -10,6 +10,9 @@ from drawapp.apps import DrawappConfig
 import re, os
 from uuid import uuid4
 
+# Create your views here.
+def select_style(request):
+    return render(request, 'drawapp/select_style.html')
 
 def firstpage(request):
     return render(request, 'drawapp/firstpage.html')
