@@ -5,14 +5,16 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <!-- JQuery -->
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <title>스타일 선택</title>
 
 
     <!--css-->
     {% load static %}
     <link href="{% static 'drawapp/select_style.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'drawapp/progress.css' %}" rel="stylesheet" type="text/css">
-{#    <link href="static/css/select_style.css" rel="stylesheet" type="text/css">#}
+
     <!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,9 +22,7 @@
 
 </head>
 <body>
-    <div class="header">
-        <img src="{% static 'drawapp/logo.png' %}" alt="/">
-    </div>
+    {% include 'header.html' %}
     <div class="stepper-wrapper">
         <div class="stepper-item completed">
             <div class="step-counter">1</div>
@@ -45,31 +45,31 @@
             <ul class="style-list">
                 <li id="0">
                     <span>&#9660; 원본</span>
-                    <img alt="original" id="original" src="..."/>
+                    <img alt="original" id="origin" src="{{result}}"/>
                 </li>
                 <li id="1">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/1.jpg"/>
                 </li>
                 <li id="2">
-                    <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/4.jpg"/>
-                </li>
-                <li id="3">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/10.jpg"/>
                 </li>
-                <li id="4">
+                <li id="3">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/15.jpg"/>
                 </li>
-                <li id="5">
+                <li id="4">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/20.jpg"/>
                 </li>
-                <li id="6">
+                <li id="5">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/22.jpg"/>
                 </li>
-                <li id="7">
+                <li id="6">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/23.jpg"/>
                 </li>
-                <li id="8">
+                <li id="7">
                     <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/25.jpg"/>
+                </li>
+                <li id="8">
+                    <img src="https://sparta-team4-project.s3.ap-northeast-2.amazonaws.com/style/4.jpg"/>
                 </li>
             </ul>
         </div>
@@ -77,19 +77,17 @@
         <div class="stylized">
             <p>확인</p>
             <div id="box">
+                <img class="loading" src="https://icon-library.com/images/load-icon-gif/load-icon-gif-20.jpg" alt="">
+                <img id="stylized-image" src=""/>
             </div>
             <div id="confirm">
-                <img id="stylized-image" src=""/>
-                <div id="btn" onclick="location.href='/pipo'">&#10142;</div>
+                <div id="btn" onclick="next()">&#10142;</div>
             </div>
         </div>
     </div>
 
-
-    <!--jquery-->
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <!--js-->
     <script src='{% static 'drawapp/select_style.js' %}'></script>
-{#    <script src='static/js/select_style.js'></script>#}
+
 </body>
 </html>
