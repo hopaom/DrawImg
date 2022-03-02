@@ -93,4 +93,105 @@
   .container footer .upload-box .fade-up > button:hover {
     background: rgba(235, 178, 214, 1);
   }
+
+
+  /* main img css  */
+  .Main_img_container {
+    display: flex;
+    width: 70%;
+    box-sizing: border-box;
+    height: 100vh;
+    max-width: 800px;
+  }
+
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, .1);
+    line-height: 0;
+  }
+
+  .box>img {
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+  }
+
+  .Main_img_01{
+    transform: translate(-12%);
+  }
+
+  .Main_img_02 {
+    transform: translate(-24%);
+  }
+
+ .Main_img_03 {
+    transform: translate(-36%);
+ }
+ .Main_img_04{
+    transform: translate(-48%);
+
+ }
+  .Main_img_05 {
+    transform: translate(-60%);
+  }
+  .Main_img_06 {
+    transform: translate(-72%);
+
+  }
+  .Main_img_07 {
+    transform: translate(-84%);
+  }
+  .Main_img_08 {
+    transform: translate(-96%);
+  }
+
+  .box:hover {
+    flex: 1 1 70%;
+  }
+
+  .box:hover>img {
+    width: 100%;
+    transform: translate(0%);
+    height: 100%;
+  }
+
+  /* 택스트 타이핑 효과 */
+  h1 {
+  font-size: 20px;
+  min-width:11px;
+  white-space: nowrap;
+  margin: 0;
+  position: fixed;
+  color: transparent;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+}
+
+h1::before {
+  content: "Typing Effect with CSS";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+  overflow: hidden;
+  border-right: 1px solid black;
+  animation: typing 5s steps(31) infinite;
+}
+
+@keyframes typing{
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
 }
