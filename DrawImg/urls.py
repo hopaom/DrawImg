@@ -15,11 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from pipo import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('drawapp.urls')),
     path('', include('pipo.urls')),
 ]
- 
