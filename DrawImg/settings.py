@@ -146,12 +146,12 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = os.path.join(BASE_DIR, '.static_root')
 
-# # AWS S3
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS S3
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-# with open(os.path.join(BASE_DIR, 'aws.json')) as f:
-#     secrets = json.loads(f.read())
+with open(os.path.join(BASE_DIR, 'aws.json')) as f:
+    secrets = json.loads(f.read())
 
 
 AWS_S3_REGION_NAME = 'ap-northeast-2'
