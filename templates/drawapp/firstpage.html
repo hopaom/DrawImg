@@ -24,9 +24,34 @@
 <div class="container">
     <div class="head">
         <h1>Image Draw Editor</h1>
-        <div id="main-img">
-            <img src="{% static 'drawapp/img/03.jpg' %}" alt="img01" class="fade-right" style="width: 70vw; height: auto;">
-            <img src="{% static 'drawapp/img/02.jpg' %}" alt="img01" class="fade-left" style="width: 15vw; height: auto; margin-bottom: 50vh">
+        <div class="Main_img_container fade-right">
+            <div class="box">
+                <img src="../../static/img/main_img/test_0.png">
+            </div>
+            <div class="box">
+                <img class="Main_img_01" src="../../static/img/main_img/test_3.png">
+            </div>
+            <div class="box">
+                <img class='Main_img_02' src="../../static/img/main_img/test_9.png">
+            </div>
+            <div class="box">
+                <img class='Main_img_03' src="../../static/img/main_img/test_14.png">
+            </div>
+                        <div class="box">
+                <img class='Main_img_04' src="../../static/img/main_img/test_19.png">
+            </div>
+                        <div class="box">
+                <img class='Main_img_05' src="../../static/img/main_img/test_21.png">
+            </div>
+                        <div class="box">
+                <img class='Main_img_06' src="../../static/img/main_img/test_22.png">
+            </div>
+            <div class="box">
+                <img class='Main_img_07' src="../../static/img/main_img/test_24.png">
+            </div>
+        </div>
+        <div class="fade-left" style="margin-top: 25vh; opacity: 0.7; transform: scale(0.8)">
+            <img src="{% static 'drawapp/img/aa.png' %}" alt="aa">
         </div>
     </div>
     <div id="cbp-so-scroller" class="cbp-so-scroller">
@@ -36,12 +61,12 @@
                 <p>나만의 풍경을 직접 만들어 보세요!</p>
             </article>
             <figure class="fade-left">
-                <img src="{% static 'drawapp/img/04.png' %}" alt="img01" style="width: 70vw;">
+                <img src="{% static 'drawapp/img/04.png' %}" alt="img04" style="width: 70vw;">
             </figure>
         </section>
         <section class="cbp-so-section">
             <figure class="fade-right">
-                <img src="{% static 'drawapp/img/01.png' %}" alt="img01">
+                <img src="{% static 'drawapp/img/06.png' %}" alt="img06" style="width: 60vw">
             </figure>
             <div id="color-box"></div>
             <article class="fade-left">
@@ -56,7 +81,7 @@
                 <p>원하는 작품을 직접 그려볼까요?</p>
             </article>
             <figure class="fade-left">
-                <img src="{% static 'drawapp/img/01.png' %}" alt="img01" style="width: 40vw">
+                <img src="{% static 'drawapp/img/05.png' %}" alt="img05" style="width: 50vw">
             </figure>
         </section>
     </div>
