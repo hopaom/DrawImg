@@ -1,8 +1,55 @@
+$(document).ready(function(){ 
+  sketch()
+})
+
 var tabMenu = $("#tab-menu");
 
 //컨텐츠 내용을 숨겨주세요!
 tabMenu.find("ul > li > div").hide();
 tabMenu.find("li.active > div").show();
+
+
+function sketch(){
+  var url = jQuery('#origin_img').attr("src")
+  $.ajax({
+    url: 'http://127.0.0.1:5000/pipo',
+    data: {'url': url},
+    method: "POST",
+    success: function (response){
+        img = response['blur']
+        jQuery('#pipo_img').attr("src", img)
+    }
+  })
+}
+
+function send_to_email(){
+  alert('이메일로 전달드리겠습니다 감사합니다 !')
+
+  var url = jQuery('#pipo_img').attr("src");
+  var id = $('#str_email01').val()
+  var email = $('#str_email02').val()
+  var csrftoken = jQuery("[name=csrfmiddlewaretoken]").val();
+  $.ajax({
+      url: 'http://127.0.0.1:8000/email/',
+      data: {'url': url, 'id':id, 'email':email},
+      beforeSend: function(xhr) {
+          xhr.setRequestHeader("X-CSRFToken", csrftoken);
+      },
+      method: "POST",
+      success: function (response){
+          imgs = response['result']
+          for (i=0; i<imgs.length; i++){
+              var temp_html = `
+              <img src="${imgs[i]}">
+              `
+              $('.imgs').append(temp_html)
+          }
+          $('.loading').hide()
+      }
+    })
+    window.location.replace('/')
+
+}
 
 //두번째 버튼 클릭 --> 모든 active 삭제 --> 내가 클릭한 버튼 active 추가
 function tabList(e) {

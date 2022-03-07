@@ -11,10 +11,6 @@ a {
   text-decoration: none;
 }
 
-.stepper-wrapper {
-  margin-top: 10vh;
-}
-
 body {
   background-size: cover;
   font-size: 25px;
@@ -40,7 +36,7 @@ body::before {
   background: #fbd1d3;
   position: absolute;
   left: 50%;
-  top: 20vh;
+  top: 15vh;
   transform: translatex(-50%);
   border-radius: 4px;
 }
@@ -77,7 +73,7 @@ body::before {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 6vh;
+  top: 55px;
   background: rgba(255, 255, 255, 0.3);
   text-align: left;
   padding: 20px;
@@ -134,15 +130,13 @@ body::before {
   width: 100%;
 }
 
-@media (min-width:425px) {
-
-
+@media (min-width: 425px) {
   #tab-menu {
     width: 70vw;
     background: #fbd1d3;
     position: absolute;
     left: 50%;
-    top: 20vh;
+    top: 15vh;
     transform: translatex(-50%);
     border-radius: 4px;
   }
@@ -154,7 +148,7 @@ body::before {
     background: #fbd1d3;
     position: absolute;
     left: 50%;
-    top: 20vh;
+    top: 15vh;
     transform: translatex(-50%);
     border-radius: 4px;
   }
@@ -171,7 +165,7 @@ body::before {
     background: #fbd1d3;
     position: absolute;
     left: 50%;
-    top: 20vh;
+    top: 15vh;
     transform: translatex(-50%);
     border-radius: 4px;
   }
@@ -184,11 +178,11 @@ body::before {
 
 @media (min-width: 1024px) {
   #tab-menu {
-    width: 45vw;
+    width: 60vw;
     background: #fbd1d3;
     position: absolute;
     left: 50%;
-    top: 20vh;
+    top: 15vh;
     transform: translatex(-50%);
     border-radius: 4px;
   }

@@ -1,10 +1,10 @@
 * {
-  font-family: 'Gothic A1', sans-serif;
+  font-family: "Gothic A1", sans-serif;
   margin: 0;
   padding: 0;
 }
 header {
-  background: #9F81CD;
+  background: #9f81cd;
   margin: 0 auto;
   width: 100vw;
   height: 70px;
@@ -13,6 +13,7 @@ header {
   align-content: center;
   position: absolute;
   z-index: 1000;
+  top: 0;
 }
 .logo {
   width: 120px;
@@ -21,20 +22,19 @@ header {
   display: block;
   width: 120px;
   margin-top: 15px;
-
 }
 
 @keyframes move_wave {
   0% {
-    transform: translateX(0) translateZ(0) scaleY(1)
+    transform: translateX(0) translateZ(0) scaleY(1);
   }
 
   50% {
-    transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
   }
 
   100% {
-    transform: translateX(-50%) translateZ(0) scaleY(1)
+    transform: translateX(-50%) translateZ(0) scaleY(1);
   }
 }
 
@@ -107,20 +107,19 @@ header {
 
 .waveAnimation .waveBottom {
   animation: move_wave 15s linear infinite;
-
 }
 
 @keyframes move_wave {
   0% {
-    transform: translateX(0) translateZ(0) scaleY(1)
+    transform: translateX(0) translateZ(0) scaleY(1);
   }
 
   50% {
-    transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    transform: translateX(-25%) translateZ(0) scaleY(0.55);
   }
 
   100% {
-    transform: translateX(-50%) translateZ(0) scaleY(1)
+    transform: translateX(-50%) translateZ(0) scaleY(1);
   }
 }
 
